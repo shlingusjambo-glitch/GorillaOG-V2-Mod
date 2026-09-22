@@ -8,7 +8,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Game: Gorilla Tag (Steam)](https://img.shields.io/badge/Game-Gorilla_Tag_(Steam)-brightgreen.svg)](https://store.steampowered.com/app/1533390/Gorilla_Tag/)
 [![Loader: BepInEx 5](https://img.shields.io/badge/Loader-BepInEx_5-orange.svg)](https://github.com/BepInEx/BepInEx)
-[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-purple.svg)](https://github.com/shlingusjambo-glitch/GorillaOG-V2/releases)
+[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-purple.svg)](https://github.com/shlingusjambo-glitch/GorillaOG-V2-Mod/releases)
 
 ---
 
@@ -30,7 +30,7 @@ v1.0.0 covers **August 2023**. This project is planned as a series of historical
 Future releases will restore other classic updates, starting with builds like **Christmas 2021**.
 Each era will ship as its own GitHub release with a matching DLL and world package, so you can pick
 your favorite version of the game and keep playing it. Watch the
-[Releases page](https://github.com/shlingusjambo-glitch/GorillaOG-V2/releases) for new eras as they drop.
+[Releases page](https://github.com/shlingusjambo-glitch/GorillaOG-V2-Mod/releases) for new eras as they drop.
 
 ### Screenshots (captured in-game with this mod)
 
@@ -69,12 +69,12 @@ your favorite version of the game and keep playing it. Watch the
 - **Gorilla Tag on Steam** (PC / SteamVR, you must own the game)
 - **BepInEx 5** (x64) installed in your Gorilla Tag folder
 - The **`GorillaOGV2-v1.0.0-Release.zip`** file from the
-  [**Releases page**](https://github.com/shlingusjambo-glitch/GorillaOG-V2/releases)
+  [**Releases page**](https://github.com/shlingusjambo-glitch/GorillaOG-V2-Mod/releases)
 
 ### Steps
 
 1. **Download** `GorillaOGV2-v1.0.0-Release.zip` from
-   [Releases](https://github.com/shlingusjambo-glitch/GorillaOG-V2/releases).
+   [Releases](https://github.com/shlingusjambo-glitch/GorillaOG-V2-Mod/releases).
 2. **Unzip it straight into your Gorilla Tag install folder**, so you end up with:
 
    ```text
@@ -113,8 +113,8 @@ You need the [.NET SDK](https://dotnet.microsoft.com/download) plus the game's m
 
 ```bash
 # 1. Clone
-git clone https://github.com/shlingusjambo-glitch/GorillaOG-V2.git
-cd GorillaOG-V2
+git clone https://github.com/shlingusjambo-glitch/GorillaOG-V2-Mod.git
+cd GorillaOG-V2-Mod
 
 # 2. Point the <HintPath> entries in GorillaOGV2.csproj at YOUR install, e.g.
 #    /home/you/.local/share/Steam/steamapps/common/Gorilla Tag/...
@@ -130,7 +130,7 @@ dotnet build -c Release --no-incremental
 ### Project layout
 
 ```text
-GorillaOG-V2/
+GorillaOG-V2-Mod/
 ├── Plugin.cs                    # BepInEx entry point plus config bindings
 ├── HistoricalWorld.cs           # Historical environment loader (zones, sky, lightmaps)
 ├── HistoricalStumpInteraction.cs# Stump interior: computer, boards, MOTD and rules text
