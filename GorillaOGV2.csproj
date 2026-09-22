@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>GorillaOGV2</AssemblyName>
+    <RootNamespace>GorillaOGV2</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <!-- Debug = verification build (zone tour, proof captures, audits, leak logs). Release = public build. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DefineConstants>$(DefineConstants);GOG_DEBUG</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="HistoricalWorld.cs" />
+    <Compile Include="HistoricalStumpInteraction.cs" />
+    <Compile Include="HistoricalCityUi.cs" />
+    <Compile Include="HistoricalWardrobe.cs" />
+    <Compile Include="HistoricalCityStore.cs" />
+    <Compile Include="HistoricalScoreboards.cs" />
+    <Compile Include="HistoricalCityMirror.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets/legacy-player.meshbin" LogicalName="GorillaOGV2.legacy-player.meshbin" />
+    <EmbeddedResource Include="assets/lightfur.png" LogicalName="GorillaOGV2.lightfur.png" />
+    <EmbeddedResource Include="assets/gorillachestface.png" LogicalName="GorillaOGV2.gorillachestface.png" />
+    <EmbeddedResource Include="assets/legacy-stump-props.bin" LogicalName="GorillaOGV2.legacy-stump-props.bin" />
+    <EmbeddedResource Include="assets/modern-computer.bin" LogicalName="GorillaOGV2.modern-computer.bin" />
+    <EmbeddedResource Include="assets/legacy-city-props.bin" LogicalName="GorillaOGV2.legacy-city-props.bin" />
+    <EmbeddedResource Include="assets/legacy-city-texts.tsv" LogicalName="GorillaOGV2.legacy-city-texts.tsv" />
+    <EmbeddedResource Include="assets/legacy-city-store.tsv" LogicalName="GorillaOGV2.legacy-city-store.tsv" />
+    <EmbeddedResource Include="assets/legacy-city-store.bin" LogicalName="GorillaOGV2.legacy-city-store.bin" />
+    <EmbeddedResource Include="assets/historical-cosmetics-whitelist.txt" LogicalName="GorillaOGV2.historical-cosmetics-whitelist.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.PhysicsModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ImageConversionModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ScreenCaptureModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.ScreenCaptureModule.dll" Private="false" />
+    <Reference Include="UnityEngine.JSONSerializeModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.JSONSerializeModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextRenderingModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="UnityEngine.VideoModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.VideoModule.dll" Private="false" />
+    <Reference Include="UnityEngine.AudioModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.AudioModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ParticleSystemModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.ParticleSystemModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UIModule" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/UnityEngine.UI.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/Gorilla Tag_Data/Managed/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="BepInEx" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/BepInEx/core/BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="/home/elywright/.local/share/Steam/steamapps/common/Gorilla Tag/BepInEx/core/0Harmony.dll" Private="false" />
+  </ItemGroup>
+</Project>

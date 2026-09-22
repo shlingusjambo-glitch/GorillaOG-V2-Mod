@@ -1,0 +1,5 @@
+bin/
+obj/
+*.pdb
+*.deps.json
+release-staging/
